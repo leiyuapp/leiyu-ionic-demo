@@ -1,0 +1,7 @@
+{
+  "name": "leiyu-ionic-demo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
