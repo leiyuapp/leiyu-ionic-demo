@@ -1,6 +1,13 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 
+const componentRoutes: Array<RouteRecordRaw> = [
+  {
+    path: '/components/action-sheet',
+    component: () => import('../views/components/ActionSheet.vue')
+  }
+]
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '',
@@ -9,7 +16,8 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/folder/:id',
     component: () => import ('../views/Folder.vue')
-  }
+  },
+  ...componentRoutes
 ]
 
 const router = createRouter({
