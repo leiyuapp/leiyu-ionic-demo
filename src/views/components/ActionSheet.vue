@@ -3,9 +3,10 @@
         <ion-header>
             <ion-toolbar>
                 <ion-buttons slot="start">
-                    <ion-back-button default-href="/" text=""></ion-back-button>
+                    <ion-back-button default-href="/" text="后退"></ion-back-button>
                 </ion-buttons>
             </ion-toolbar>
+            <ion-title>Action Sheet</ion-title>
         </ion-header>
         <ion-content>
             <ion-button expand="block" @click="presentActionSheet">Action Sheet</ion-button>
@@ -21,7 +22,7 @@
         IonContent,
         IonToolbar,
         IonButtons,
-        IonBackButton
+        IonBackButton, IonTitle
     } from "@ionic/vue";
 import { trash, share, heart, close, caretForwardCircle } from 'ionicons/icons'
 import { defineComponent } from 'vue';
@@ -35,7 +36,8 @@ export default defineComponent({
         IonContent,
         IonToolbar,
         IonButtons,
-        IonBackButton
+        IonBackButton,
+        IonTitle
     },
     setup() {
         const presentActionSheet = async () => {
